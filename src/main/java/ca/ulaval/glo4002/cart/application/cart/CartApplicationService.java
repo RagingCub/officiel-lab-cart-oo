@@ -10,8 +10,8 @@ public class CartApplicationService {
 
     private CartRepository cartRepository;
 
-    public CartApplicationService() {
-        this.cartRepository = new CartRepository();
+    public CartApplicationService(CartRepository cartRepository) {
+        this.cartRepository = cartRepository;
     }
 
     public Cart findOrCreateCartForClient(String email) {
