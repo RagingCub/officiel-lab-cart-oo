@@ -12,8 +12,8 @@ public class ShopResource {
 
     private ShopApplicationService shopService;
 
-    public ShopResource() {
-        this.shopService = new ShopApplicationService(PersistenceProvider.getShopRepository());
+    public ShopResource(ShopApplicationService shopService) {
+        this.shopService = shopService;
     }
 
     @GET

@@ -19,9 +19,9 @@ public class CartResource {
     private CartApplicationService cartService;
     private ShopApplicationService shopService;
 
-    public CartResource() {
-        this.cartService = new CartApplicationService(PersistenceProvider.getCartRepository());
-        this.shopService = new ShopApplicationService(PersistenceProvider.getShopRepository());
+    public CartResource(CartApplicationService cartService, ShopApplicationService shopService) {
+        this.cartService = cartService;
+        this.shopService = shopService;
     }
 
     @GET
